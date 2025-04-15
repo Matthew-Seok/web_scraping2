@@ -35,3 +35,18 @@ print(headline_news_title)
 # 뉴스 제묵을 반복문을 이용하여 순회
 for idx, title in enumerate(headline_news_title):
   print(f"{idx + 1} : {title}")
+
+print("\n== 특정 키워드를 이용하여 원하는 뉴스 기사 추출하기 ==")
+keyword = '오픈AI'
+
+find_keyword_new_title = []
+
+# title.find(keyword) 
+# - 키워드에 내용안에 존재하면 0을 반환
+# - 키워드가 존재하지 않으면 -1을 반환
+
+for i, title in enumerate(headline_news_title):
+  if title.find(keyword) != -1:
+    find_keyword_new_title.append(title)
+
+print(find_keyword_new_title)
